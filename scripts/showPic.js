@@ -28,9 +28,10 @@ function prepareGallary() {
   const link = gallary.getElementsByTagName("a");
   for (let i = 0; i < link.length; i++) {
     // 实现html 和js 分离 不用写onclick="..."
-    link[i].onclick = function () {
+    link[i].onclick = function () { // 这里onclick同样支持键盘enter， 所以不需要添加onkeypres事件
       return !showPic(this); // 优化：由showPic函数决定是否加载原本的src，如果showPic执行成功，则不需要跳转到src
     };
+    // link[i].onkeypress = link[i].onclick 不需要，慎用
   }
 }
 
