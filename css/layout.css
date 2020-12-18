@@ -21,9 +21,18 @@ li {
   float: left;
   padding: 1em 0;
   padding-right: 2em;
-  list-style: none;
 }
 img {
   display: block;
   clear: both;
 }
+#imagegallary {
+  list-style: none;
+}
+#imagegallary li {
+  display: inline;
+}
+#imagegallary li a img{
+  border: 0;
+}
+
